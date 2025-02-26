@@ -5,4 +5,4 @@
 
 Скриншот результата выполнения программы:
 
-![image](https://github.com/user-attachments/assets/68d6404c-3a05-4241-8a2a-b2e4ccaa5a13)
+![image](https://github.com/user-attachments/assets/12cead53-3264-45dd-bd89-7530d7665354)
