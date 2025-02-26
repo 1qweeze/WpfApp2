@@ -1,0 +1,44 @@
+﻿<Window x:Class="PhoneCallCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Калькулятор стоимости разговора" Height="350" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Поле для ввода длительности разговора -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Длительность (мин):" Margin="5"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtDuration" Margin="5"/>
+
+        <!-- Поле для ввода стоимости минуты -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Стоимость минуты:" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtCostPerMinute" Margin="5"/>
+
+        <!-- Переключатель для выбора дня недели -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="День недели:" Margin="5"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="5">
+            <RadioButton Name="rbWeekday" Content="Будний день" Margin="5"/>
+            <RadioButton Name="rbWeekend" Content="Выходной день" Margin="5"/>
+        </StackPanel>
+
+        <!-- Кнопка для расчета -->
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="btnCalculate" Content="Вычислить" Margin="5" Click="btnCalculate_Click"/>
+
+        <!-- Поле для вывода результата -->
+        <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Name="txtResult" Margin="5" TextWrapping="Wrap"/>
+
+        <!-- Поле для вывода сообщений об ошибках -->
+        <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Name="txtError" Margin="5" Foreground="Red" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
